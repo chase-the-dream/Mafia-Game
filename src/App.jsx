@@ -6,7 +6,7 @@ import GamePage from './Components/GamePage'
 
 function App() {
   return (
-    <BrowserRouter basename="/Mafia-Game">
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/setup" element={<SetupPage />} />
