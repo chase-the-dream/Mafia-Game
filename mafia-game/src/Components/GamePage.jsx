@@ -1,9 +1,11 @@
-import cardBack from '../assets/card-back.png'
+import Card from './Card'
+import './GamePage.css'
 
 function GamePage() {
   const stored = localStorage.getItem('mafiaSetup')
   const data = stored ? JSON.parse(stored) : null
   
+  // mafia - 1, detect - 2, doc - 3, town - 4
   function buildRoles(nmafia, ndetectives, ndoctor, ntownspeople) {
     const roles = []
     for (let i = 0; i < nmafia; i++) roles.push(1)        // mafia
@@ -26,10 +28,12 @@ function GamePage() {
 
   if (!data) {
     return (
-      <>
-        <h1>Game Start</h1>
-        <p>No setup data found. Go back to setup.</p>
-      </>
+      <div className="game-page">
+        <div className="game-header">
+          <h1 className="game-title">Game Start</h1>
+          <p className="game-subtitle">No setup data found. Go back to setup.</p>
+        </div>
+      </div>
     )
   }
 
@@ -38,16 +42,27 @@ function GamePage() {
   const roles = buildRoles(data.nmafia, data.ndetectives, data.ndoctor, data.ntownspeople)
 
   return (
-    <>
-      <h1>Game Start</h1>
-      <p>
-        Mafia: {data.nmafia} | Townspeople: {data.ntownspeople} | Doctors: {data.ndoctor} | Detectives: {data.ndetectives}
-        Roles: {roles}
-      </p>
-      <button type="button">
-        <img src={cardBack} alt="Card Back" height="180px" width="auto"></img>
-      </button>
-    </>
+    <div className="game-page">
+      <div className="game-header">
+        <h1 className="game-title">Game Start</h1>
+        <p className="game-subtitle">Keep your role secret and flip when ready.</p>
+      </div>
+
+      <div className="game-panel">
+        <div>Mafia: {data.nmafia} | Townspeople: {data.ntownspeople} | Doctors: {data.ndoctor} | Detectives: {data.ndetectives}</div>
+        {/* <div className="game-chip-row">
+          {roles.map((role, index) => (
+            <span key={`${role}-${index}`} className="game-chip">Role {role}</span>
+          ))}
+        </div> */}
+      </div>
+
+      <div className="card-grid">
+        {roles.map((role, index) => (
+          <Card key={`${role}-${index}`} role={role} />
+        ))}
+      </div>
+    </div>
   )
 }
 

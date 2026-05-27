@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Bungee+Inline&family=Space+Grotesk:wght@400;600;700&display=swap');
+
+:root {
+  --game-ink: #160025;
+  --game-panel: rgba(255, 255, 255, 0.9);
+}
+
+.game-page {
+  min-height: 100vh;
+  padding: 48px 24px 80px;
+  background:
+    radial-gradient(900px 500px at 10% 10%, rgba(0, 255, 229, 0.55), transparent 60%),
+    radial-gradient(800px 520px at 90% 20%, rgba(255, 0, 111, 0.55), transparent 60%),
+    linear-gradient(140deg, #ffe600, #00a2ff 55%, #ff6b00);
+  color: var(--game-ink);
+}
+
+.game-header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.game-title {
+  font-family: 'Bungee', cursive;
+  font-size: clamp(32px, 5vw, 56px);
+  margin: 0 0 10px;
+  text-transform: uppercase;
+}
+
+.game-subtitle {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(16px, 2.4vw, 20px);
+  margin: 0;
+}
+
+.game-panel {
+  background: var(--game-panel);
+  border: 3px solid #160025;
+  border-radius: 20px;
+  padding: 18px 20px;
+  margin: 0 auto 28px;
+  width: min(900px, 100%);
+  box-shadow: 0 12px 0 #160025;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.game-chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.game-chip {
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: #fff;
+  border: 2px solid #160025;
+  font-weight: 600;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 28px;
+  width: min(1300px, 100%);
+  margin: 0 auto;
+  place-items: center;
+}
