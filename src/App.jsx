@@ -11,6 +11,7 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/setup" element={<SetupPage />} />
         <Route path="/game" element={<GamePage />} />
+        <Route path="*" element={<HomePage />} />
       </Routes>
     </HashRouter>
   )
