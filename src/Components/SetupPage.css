@@ -6,8 +6,9 @@
 }
 
 .setup-page {
-  min-height: 100vh;
-  padding: 64px 24px;
+  min-height: 100svh;
+  min-height: 100dvh;
+  padding: 64px 28px;
   display: grid;
   place-items: center;
   background:
@@ -23,7 +24,7 @@
   border-radius: 24px;
   padding: 32px;
   box-shadow: 0 18px 0 #0a0020;
-  width: min(560px, 100%);
+  width: min(520px, 92vw);
   backdrop-filter: blur(6px);
   animation: rise-in 0.6s ease both;
 }
@@ -90,7 +91,7 @@
 
 @media (max-width: 768px) {
   .setup-page {
-    padding: 48px 18px;
+    padding: 48px 22px;
     background:
       radial-gradient(620px 420px at 10% 8%, rgba(255, 0, 122, 0.6), transparent 60%),
       radial-gradient(560px 380px at 90% 18%, rgba(0, 255, 170, 0.5), transparent 60%),
@@ -102,6 +103,7 @@
     border-width: 3px;
     border-radius: 18px;
     box-shadow: 0 12px 0 #0a0020;
+    width: min(480px, 92vw);
   }
 
   .setup-title {
@@ -121,6 +123,10 @@
 }
 
 @media (max-width: 640px) {
+  .setup-page {
+    padding: 44px 20px;
+  }
+
   .setup-card {
     padding: 18px;
     border-radius: 16px;
@@ -143,7 +149,7 @@
 
 @media (max-width: 420px) {
   .setup-page {
-    padding: 36px 14px;
+    padding: 36px 18px;
   }
 
   .setup-card {

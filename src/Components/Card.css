@@ -8,6 +8,7 @@
   align-items: center;
   justify-content: center;
   border-radius: 18px;
+  width: 100%;
 }
 
 .card-button:focus-visible {
@@ -34,7 +35,8 @@
 
 @media (max-width: 640px) {
   .card-img {
-    width: clamp(150px, 62vw, 210px);
+    width: 100%;
+    max-width: 190px;
     border-radius: 14px;
     box-shadow: 0 10px 22px rgba(18, 0, 26, 0.32);
   }
@@ -42,12 +44,12 @@
 
 @media (max-width: 520px) {
   .card-img {
-    width: clamp(140px, 56vw, 190px);
+    max-width: 170px;
   }
 }
 
 @media (max-width: 420px) {
   .card-img {
-    width: min(190px, 72vw);
+    max-width: 160px;
   }
 }

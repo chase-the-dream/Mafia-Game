@@ -9,10 +9,12 @@
 }
 
 .home-page {
-  min-height: 100vh;
+  min-height: 100svh;
+  min-height: 100dvh;
+  width: 100%;
   display: grid;
   place-items: center;
-  padding: 64px 24px;
+  padding: clamp(28px, 6vh, 64px) 24px;
   color: var(--home-ink);
   background:
     radial-gradient(1200px 600px at -10% 10%, rgba(0, 240, 255, 0.8), transparent 60%),
@@ -94,7 +96,7 @@
 
 @media (max-width: 768px) {
   .home-page {
-    padding: 48px 18px;
+    padding: clamp(24px, 6vh, 48px) 16px;
     background:
       radial-gradient(700px 420px at -5% 8%, rgba(0, 240, 255, 0.75), transparent 60%),
       radial-gradient(620px 380px at 105% 18%, rgba(255, 75, 216, 0.75), transparent 60%),
@@ -128,7 +130,7 @@
 
 @media (max-width: 420px) {
   .home-page {
-    padding: 36px 14px;
+    padding: clamp(20px, 6vh, 36px) 14px;
   }
 
   .home-page::before {

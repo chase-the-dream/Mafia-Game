@@ -47,6 +47,13 @@
 .game-role-summary {
   font-weight: 600;
   line-height: 1.4;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 14px;
+}
+
+.game-role-item {
+  white-space: nowrap;
 }
 
 .game-chip-row {
@@ -99,8 +106,7 @@
 
   .game-role-summary {
     font-size: 14px;
-    overflow-wrap: anywhere;
-    word-break: break-word;
+    gap: 6px 10px;
   }
 
   .game-chip-row {
@@ -113,7 +119,7 @@
   }
 
   .card-grid {
-    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    grid-template-columns: repeat(2, minmax(140px, 1fr));
     gap: 14px;
   }
 }
@@ -130,11 +136,5 @@
 
   .game-role-summary {
     font-size: 13px;
-  }
-}
-
-@media (max-width: 520px) {
-  .card-grid {
-    grid-template-columns: 1fr;
   }
 }
