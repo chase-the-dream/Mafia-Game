@@ -92,6 +92,56 @@
   box-shadow: 0 4px 0 #12001a;
 }
 
+@media (max-width: 768px) {
+  .home-page {
+    padding: 48px 18px;
+    background:
+      radial-gradient(700px 420px at -5% 8%, rgba(0, 240, 255, 0.75), transparent 60%),
+      radial-gradient(620px 380px at 105% 18%, rgba(255, 75, 216, 0.75), transparent 60%),
+      linear-gradient(150deg, var(--home-bg-1), var(--home-bg-2) 55%, var(--home-bg-3));
+  }
+
+  .home-page::before,
+  .home-page::after {
+    width: 280px;
+    height: 280px;
+  }
+
+  .home-title {
+    font-size: clamp(36px, 12vw, 72px);
+    letter-spacing: 2px;
+    text-shadow: 4px 6px 0 rgba(18, 0, 26, 0.18);
+  }
+
+  .home-subtitle {
+    font-size: 16px;
+    margin-bottom: 24px;
+  }
+
+  .home-play {
+    font-size: 16px;
+    padding: 12px 28px;
+    border-width: 3px;
+    box-shadow: 0 8px 0 #12001a;
+  }
+}
+
+@media (max-width: 420px) {
+  .home-page {
+    padding: 36px 14px;
+  }
+
+  .home-page::before {
+    top: -140px;
+    left: -160px;
+  }
+
+  .home-page::after {
+    bottom: -180px;
+    right: -160px;
+  }
+}
+
 @keyframes floaty {
   0%, 100% {
     transform: translateY(0) rotate(0deg);

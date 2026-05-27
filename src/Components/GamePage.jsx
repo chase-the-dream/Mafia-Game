@@ -49,7 +49,9 @@ function GamePage() {
       </div>
 
       <div className="game-panel">
-        <div>Mafia: {data.nmafia} | Townspeople: {data.ntownspeople} | Doctors: {data.ndoctor} | Detectives: {data.ndetectives}</div>
+        <div className="game-role-summary">
+          Mafia: {data.nmafia} | Townspeople: {data.ntownspeople} | Doctors: {data.ndoctor} | Detectives: {data.ndetectives}
+        </div>
         {/* <div className="game-chip-row">
           {roles.map((role, index) => (
             <span key={`${role}-${index}`} className="game-chip">Role {role}</span>

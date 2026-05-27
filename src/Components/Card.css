@@ -31,3 +31,23 @@
   box-shadow: 0 14px 30px rgba(18, 0, 26, 0.35);
   transition: filter 0.25s ease;
 }
+
+@media (max-width: 640px) {
+  .card-img {
+    width: clamp(150px, 62vw, 210px);
+    border-radius: 14px;
+    box-shadow: 0 10px 22px rgba(18, 0, 26, 0.32);
+  }
+}
+
+@media (max-width: 520px) {
+  .card-img {
+    width: clamp(140px, 56vw, 190px);
+  }
+}
+
+@media (max-width: 420px) {
+  .card-img {
+    width: min(190px, 72vw);
+  }
+}

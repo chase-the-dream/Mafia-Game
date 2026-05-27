@@ -44,6 +44,11 @@
   font-family: 'Space Grotesk', sans-serif;
 }
 
+.game-role-summary {
+  font-weight: 600;
+  line-height: 1.4;
+}
+
 .game-chip-row {
   display: flex;
   flex-wrap: wrap;
@@ -66,4 +71,70 @@
   width: min(1300px, 100%);
   margin: 0 auto;
   place-items: center;
+}
+
+@media (max-width: 768px) {
+  .game-page {
+    padding: 36px 18px 64px;
+    background:
+      radial-gradient(520px 360px at 10% 8%, rgba(0, 255, 229, 0.55), transparent 60%),
+      radial-gradient(520px 360px at 90% 18%, rgba(255, 0, 111, 0.55), transparent 60%),
+      linear-gradient(155deg, #ffe600, #00a2ff 55%, #ff6b00);
+  }
+
+  .game-title {
+    font-size: clamp(28px, 8vw, 40px);
+  }
+
+  .game-subtitle {
+    font-size: 16px;
+  }
+
+  .game-panel {
+    padding: 14px 16px;
+    border-width: 2px;
+    border-radius: 16px;
+    box-shadow: 0 8px 0 #160025;
+  }
+
+  .game-role-summary {
+    font-size: 14px;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  .game-chip-row {
+    gap: 8px;
+  }
+
+  .game-chip {
+    padding: 6px 12px;
+    font-size: 14px;
+  }
+
+  .card-grid {
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    gap: 14px;
+  }
+}
+
+@media (max-width: 420px) {
+  .game-page {
+    padding: 28px 14px 56px;
+  }
+
+  .game-panel {
+    padding: 12px 14px;
+    box-shadow: 0 6px 0 #160025;
+  }
+
+  .game-role-summary {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 520px) {
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
 }
